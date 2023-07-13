@@ -1,5 +1,5 @@
 name: semibox_mobx_base_utils
-description: A new Flutter package project.
+description: A package project with some base classes, mixins, widgets for integrating with mobx.
 version: 0.0.1
 homepage: "https://github.com/Slimaeus/semibox_mobx_base_utils"
 
