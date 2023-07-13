@@ -1,6 +1,6 @@
 name: semibox_mobx_base_utils
 description: A package project with some base classes, mixins, widgets for integrating with mobx.
-version: 0.0.1
+version: 0.0.4
 homepage: "https://github.com/Slimaeus/semibox_mobx_base_utils"
 
 environment:
