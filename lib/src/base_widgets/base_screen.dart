@@ -49,6 +49,7 @@ abstract class BaseScreenState<T extends BaseScreen, S extends BaseStoreMixin>
     ///Initialize the [store] instance.
     store = context.read<S>();
 
+    // ignore: invalid_use_of_protected_member
     store.onInit(context);
 
     ///Print log when the screen is created.
@@ -59,6 +60,7 @@ abstract class BaseScreenState<T extends BaseScreen, S extends BaseStoreMixin>
   @override
   void dispose() {
     /// When this screen on dispose then store call onDispose function
+    // ignore: invalid_use_of_protected_member
     store.onDispose(context);
     super.dispose();
   }
