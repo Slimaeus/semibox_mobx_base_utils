@@ -1,7 +1,7 @@
 name: semibox_mobx_base_utils
 description: A new Flutter package project.
 version: 0.0.1
-homepage: ""
+homepage: "https://github.com/Slimaeus/semibox_mobx_base_utils"
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
