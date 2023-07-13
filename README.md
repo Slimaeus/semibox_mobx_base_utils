@@ -3,7 +3,7 @@
 </p> -->
 <p align="center">
   <a href="https://pub.dev/packages/semibox_mobx_base_utils/score" target="_blank"><img src="https://img.shields.io/badge/PUB%20POINTS-140%2F140-green" alt="pub points" /></a>
-  <a href="https://pub.dev/packages/semibox_mobx_base_utils/score" target="_blank"><img src="https://img.shields.io/badge/Coder0211-likes%3A22-yellow" alt="semibox_mobx_base_utils-like" /></a>
+  <a href="https://pub.dev/packages/semibox_mobx_base_utils/score" target="_blank"><img src="https://img.shields.io/badge/Slimaeus-likes%3A0-yellow" alt="semibox_mobx_base_utils-like" /></a>
   <a href="https://pub.dev/packages/semibox_mobx_base_utils/license" target="_blank"><img src="https://img.shields.io/badge/LICENSE-MIT-blue" alt="Package License" /></a>  
 </p>
 
