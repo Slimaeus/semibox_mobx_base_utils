@@ -1,39 +1,66 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+<!-- <p align="center">
+  <a href="https://github.com/coder0211/coder0211"><img src="https://raw.githubusercontent.com/slimaeus/semibox_mobx_base_utils/main/lib/logo/logo.svg" width="200" alt="Coder0211-logo"></a>
+</p> -->
+<p align="center">
+  <a href="https://pub.dev/packages/semibox_mobx_base_utils/score" target="_blank"><img src="https://img.shields.io/badge/PUB%20POINTS-140%2F140-green" alt="pub points" /></a>
+  <a href="https://pub.dev/packages/semibox_mobx_base_utils/score" target="_blank"><img src="https://img.shields.io/badge/Coder0211-likes%3A22-yellow" alt="semibox_mobx_base_utils-like" /></a>
+  <a href="https://pub.dev/packages/semibox_mobx_base_utils/license" target="_blank"><img src="https://img.shields.io/badge/LICENSE-MIT-blue" alt="Package License" /></a>  
+</p>
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+# Semibox mobx base utils
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+This is a package with functions and widgets to make app development faster and more convenient, currently it is developed by one developer.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Support
 
-## Features
+## 1. Base screen
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+### [BaseScreen] is a base class for all screens in the app.
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+- It provides some useful methods for screens.
+- Every screen should extend this class.
+- Example:
 
 ```dart
-const like = 'sample';
+class MyHomePage extends BaseScreen {
+     const MyHomePage({Key? key}) : super(key: key);
+     @override
+     State<MyHomePage> createState() => _MyHomePageState();
+}
 ```
 
-## Additional information
+### [BaseScreenState] is a base class for all screen states in the app.
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+- It provides the [store].
+- AutomaticKeepAliveClientMixin is used to keep the screen alive when the user
+  navigates to another screen.
+- It also provides the [initState] method to initialize the [store] instance.
+- It also provides the [build] method to build the screen.
+- Every screen state should extend this class.
+- [BaseScreenState] is a stateful widget.
+- Example:
+
+```dart
+class _MyHomePageState extends BaseScreenState<MyHomePage, MainStore> {}
+```
+
+## 2. Store
+
+### State managements
+
+```dart
+/// Clean before updating:
+///    flutter packages pub run build_runner watch --delete-conflicting-outputs
+
+part 'example_store.g.dart';
+
+class ExampleStore = _ExampleStore with _$ExampleStore;
+
+abstract class _ExampleStore with Store, BaseStoreMixin {
+  @override
+  void onInit(BuildContext context) {}
+
+  @override
+  void onDispose() {}
+}
+```
